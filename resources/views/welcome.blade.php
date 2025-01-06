@@ -2,7 +2,7 @@
 
 <x-guest-layout>
 
-    <div class="flex justify-center items-center h-screen">
+    <div class="flex justify-center items-center">
         <div class="text-center">
             <h1 class="text-4xl font-bold text-gray-900">Welcome to Pattern Pals</h1>
             <p class="text-lg text-gray-700 mt-4">Login or register to view all the patterns available</p>

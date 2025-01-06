@@ -40,13 +40,13 @@
                                 <!-- If the user has already liked this pattern, show the "Unlike" button -->
                                 <form method="POST" action="{{ route('patterns.unlike', $pattern->id) }}">
                                     @csrf
-                                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md">Unlike</button>
+                                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md mt-2">Unlike</button>
                                 </form>
                             @else
                                 <!-- If the user hasn't liked this pattern yet, show the "Like" button -->
                                 <form method="POST" action="{{ route('patterns.like', $pattern->id) }}">
                                     @csrf
-                                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md">Like</button>
+                                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md mt-2">Like</button>
                                 </form>
                             @endif
                             <h3 class="mt-4 font-bold">Materials</h3>
