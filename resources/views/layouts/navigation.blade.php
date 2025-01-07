@@ -27,6 +27,9 @@
                     <x-nav-link :href="route('patterns.likedPatterns')" :active="request()->routeIs('patterns.likedPatterns')">
                         {{ __('Liked Patterns') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('guide')" :active="request()->routeIs('guide')">
+                        {{ __('Guide') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -93,6 +96,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('patterns.likedPatterns')" :active="request()->routeIs('patterns.likedPatterns')">
             {{ __('Liked Patterns') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('guide')" :active="request()->routeIs('guide')">
+            {{ __('Guide') }}
             </x-responsive-nav-link>
         </div>
 

@@ -318,4 +318,9 @@ class PatternController extends Controller
             'title' => "Liked Patterns"
         ]);
     }
+
+    /** Guide */
+    public function guide(){
+        return view('patterns.guide');
+    }
 }

@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/patterns/{pattern}/like', [PatternController::class, 'like'])->name('patterns.like');
     Route::post('/patterns/{pattern}/unlike', [PatternController::class, 'unlike'])->name('patterns.unlike');
 
+    Route::get('/guide', [PatternController::class, 'guide'])->name('guide');
 });
 
 require __DIR__.'/auth.php';
