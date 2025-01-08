@@ -66,7 +66,7 @@
                                 <div class="p-2">
                                     <h3>{{ $pattern->title }}</h3>
                                     <p> {{ $pattern->category->name}}</p>
-                                    
+                                    <p> Created by {{ $pattern->user->name }}</p>
                                 </div>
                             </a>
                         @endforeach

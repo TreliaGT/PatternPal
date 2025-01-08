@@ -41,6 +41,11 @@
                                 </a>
                             </li>
                             <li class="mr-1">
+                                <a href="#crossstitch" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                    Cross Stitch
+                                </a>
+                            </li>
+                            <li class="mr-1">
                                 <a href="#felting" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Felting
                                 </a>
@@ -52,90 +57,6 @@
                     <div id="knitting" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Knitting</h4>
                         <p class="mb-4">Knitting involves creating fabric by interlocking loops of yarn with needles. Key techniques include stockinette, garter stitch, ribbing, and cable patterns.</p>
-                        <table class="min-w-full table-auto border-collapse border border-gray-300 dark:border-gray-700">
-                            <thead class="bg-gray-100 dark:bg-gray-700">
-                                <tr>
-                                    <th class="px-4 py-2 text-left border border-gray-300 dark:border-gray-700">Term</th>
-                                    <th class="px-4 py-2 text-left border border-gray-300 dark:border-gray-700">US</th>
-                                    <th class="px-4 py-2 text-left border border-gray-300 dark:border-gray-700">UK</th>
-                                    <th class="px-4 py-2 text-left border border-gray-300 dark:border-gray-700">Chinese</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white dark:bg-gray-800">
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Knit</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">k</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">k</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">编织 (Biān zhī)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Purl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">p</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">p</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">反针 (Fǎn zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Slip Stitch</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">sl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">sl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">引拔针 (Yǐn bá zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Cast On</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">CO</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">CO</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">起针 (Qǐ zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Bind Off</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">BO</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">BO</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">收针 (Shōu zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Increase</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">inc</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">inc</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">加针 (Jiā zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Decrease</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">dec</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">dec</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">减针 (Jiǎn zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Knit Two Together</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">k2tog</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">k2tog</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">并针 (Bìng zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Purl Two Together</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">p2tog</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">p2tog</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">并反针 (Bìng fǎn zhēn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Yarn Over</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">yo</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">yo</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">绕线 (Rào xiàn)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Front Loop</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">fl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">fl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">前环 (Qián huán)</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Back Loop</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">bl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">bl</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">后环 (Hòu huán)</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
                     <div id="crochet" class="tab-content hidden">
@@ -250,6 +171,11 @@
                         <!-- Embroidery content here -->
                     </div>
 
+                    <div id="crossstitch" class="tab-content hidden">
+                        <h4 class="text-xl font-semibold mt-4 mb-2">Cross Stitch</h4>
+                        <p class="mb-4">Embroidery is the art of decorating fabric with thread. Techniques include cross-stitch, satin stitch, and French knots. It's used for decorative purposes on various fabric items.</p>
+                        <!-- Cross Stitch content here -->
+                    </div>
                     <div id="felting" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Felting</h4>
                         <p class="mb-4">Felting is the process of matting and compressing fibers (such as wool) to create a solid fabric. It can be done either wet or dry, and is used for making items like hats, slippers, and bags.</p>

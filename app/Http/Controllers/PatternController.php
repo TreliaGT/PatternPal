@@ -78,10 +78,12 @@ class PatternController extends Controller
 
         if($request->steps){
             foreach ($request->steps as $step) {
-                $pattern->steps()->create([
-                    'title' => $step['title'],
-                    'steps' => $step['step'],
-                ]);
+                if(isset($step['title']) && isset($step['step'])){
+                    $pattern->steps()->create([
+                        'title' => $step['title'],
+                        'steps' => $step['step'],
+                    ]);
+                }
             }
         }
         return redirect()->route('patterns.show', ['pattern' => $pattern->id])
@@ -157,10 +159,12 @@ class PatternController extends Controller
             $pattern->steps()->delete();
         
             foreach ($steps as $step) {
-                $pattern->steps()->create([
-                    'title' => $step['title'],
-                    'steps' => $step['step'],
-                ]);
+                if(isset($step['title']) && isset($step['step'])){
+                    $pattern->steps()->create([
+                        'title' => $step['title'],
+                        'steps' => $step['step'],
+                    ]);
+                }
             }
         }
 
