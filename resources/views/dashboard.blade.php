@@ -12,7 +12,7 @@
     </div>
     </x-slot>
 
-    @if(isset($categories)|| isset($tags))
+    @if(isset($categories) || isset($tags))
     <div class="pt-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -20,10 +20,10 @@
                     <!-- Search Form -->
                     <form method="GET" action="{{ route('patterns.search') }}" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                         <!-- Title Search -->
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by title" class="p-2 border-gray-300 rounded-md shadow-sm w-full">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by title" class="p-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm w-full dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800">
 
                         <!-- Category Dropdown -->
-                        <select name="category" class="p-2 border-gray-300 rounded-md shadow-sm ">
+                        <select name="category" class="p-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800">
                             <option value="">All Categories</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
@@ -33,7 +33,7 @@
                         </select>
 
                         <!-- Tags Dropdown -->
-                        <select name="tags[]" class="p-2 border-gray-300 rounded-md shadow-sm " multiple>
+                        <select name="tags[]" class="p-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800" multiple>
                             <option value="">Select Tags</option>
                             @foreach($tags as $tag)
                                 <option value="{{ $tag->id }}" 
@@ -44,13 +44,16 @@
                         </select>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">Search</button>
+                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Search
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    @endif 
+@endif
+
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
