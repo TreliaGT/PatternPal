@@ -197,13 +197,13 @@
                                 <tr>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Decrease</td>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">dec</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">dec</td>
+                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">dec / dc2tog</td>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">A</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Increase</td>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Inc</td>
-                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Inc / dc2tog</td>
+                                    <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">Inc</td>
                                     <td class="px-4 py-2 border border-gray-300 dark:border-gray-700">V</td>
                                 </tr>
                                 <tr>
