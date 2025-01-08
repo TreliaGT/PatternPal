@@ -16,32 +16,32 @@
                     <div class="mb-4">
                         <ul class="flex flex-wrap border-b border-gray-300 dark:border-gray-700">
                             <li class="mr-1">
-                                <a href="#knitting" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#knitting" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Knitting
                                 </a>
                             </li>
                             <li class="mr-1">
-                                <a href="#crochet" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#crochet" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Crochet
                                 </a>
                             </li>
                             <li class="mr-1">
-                                <a href="#weaving" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#weaving" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Weaving
                                 </a>
                             </li>
                             <li class="mr-1">
-                                <a href="#sewing" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#sewing" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Sewing
                                 </a>
                             </li>
                             <li class="mr-1">
-                                <a href="#embroidery" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#embroidery" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Embroidery
                                 </a>
                             </li>
                             <li class="mr-1">
-                                <a href="#felting" class="block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+                                <a href="#felting" class="tab block py-2 px-4 rounded-t-lg hover:text-blue-500 text-center sm:text-left bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                                     Felting
                                 </a>
                             </li>
@@ -136,7 +136,6 @@
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
 
                     <div id="crochet" class="tab-content hidden">
@@ -264,7 +263,7 @@
 
     <script>
         // Tab switching functionality
-        document.querySelectorAll('a').forEach(tab => {
+        document.querySelectorAll('a.tab').forEach(tab => {
             tab.addEventListener('click', (e) => {
                 e.preventDefault();
                 document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));

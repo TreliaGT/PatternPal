@@ -46,8 +46,8 @@ class PatternController extends Controller
             'tags' => 'array', // Ensure tags are an array
             'tags.*' => 'exists:tags,id', // Ensure each tag ID exists in the tags table
             'steps' => 'nullable|array', // Ensure steps is an array
-            'steps.*.title' => 'required|string|max:255',
-            'steps.*.step' => 'required|string',
+            'steps.*.title' => 'nullable|string|max:255',
+            'steps.*.step' => 'nullable|string',
         ]);
 
         $image_url = $request->feature_image_url;
