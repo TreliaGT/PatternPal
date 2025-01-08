@@ -75,18 +75,26 @@
                             @endif
                         </div>
                     </div>
-                    <h2 class="mt-4 font-bold">Steps</h2>
-                    <ul class="step-list">
-                        @foreach($pattern->steps as $step)
-                            <li class="mb-4"><h3 class="font-bold">{{ $step->title }}</h3>
-                                <ul>
-                                    @foreach (explode(',', $step->steps) as $individualStep)
-                                        <li class="item cursor-pointer p-2 mb-2 bg-gray-200 rounded-md hover:bg-gray-300" data-pattern-id="{{ $pattern->id }}" data-step="{{ trim($individualStep) }}">{{ trim($individualStep) }}</li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                        @endforeach
-                    </ul>
+                    @if($pattern->steps->isNotEmpty())
+                        <h2 class="mt-4 font-bold text-gray-900 dark:text-gray-100">Steps</h2>
+                        <ul class="step-list">
+                            @foreach($pattern->steps as $step)
+                                <li class="mb-4">
+                                    <h3 class="font-bold text-gray-900 dark:text-gray-100">{{ $step->title }}</h3>
+                                    <ul>
+                                        @foreach (explode(',', $step->steps) as $individualStep)
+                                            <li class="item cursor-pointer p-2 mb-2 bg-gray-200 dark:bg-gray-700 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600"
+                                                data-pattern-id="{{ $pattern->id }}"
+                                                data-step="{{ trim($individualStep) }}">
+                                                {{ trim($individualStep) }}
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+
             </div>
         </div>
     </div>
@@ -98,7 +106,7 @@
         });
 
 
-       // Get the list items
+      // Get the list items
         const items = document.querySelectorAll('.step-list .item');
 
         if (items.length === 0) {
@@ -113,12 +121,11 @@
         const savedSteps = JSON.parse(localStorage.getItem('selectedSteps')) || [];
         console.log("Saved Steps: ", savedSteps);
 
-
         // Apply background color to items already selected
         items.forEach(item => {
             const savedItem = savedSteps.find(step => step.patternId === patternId && step.stepText === item.dataset.step);
             if (savedItem) {
-                item.classList.add('bg-gray-800', 'text-white');
+                item.classList.add('bg-gray-300', 'text-gray-900', 'dark:bg-gray-800', 'dark:text-white');
             }
         });
 
@@ -126,8 +133,10 @@
         items.forEach(item => {
             item.addEventListener('click', () => {
                 // Toggle background color on click
-                item.classList.toggle('bg-gray-800');
-                item.classList.toggle('text-white');
+                item.classList.toggle('dark:bg-gray-800');
+                item.classList.toggle('dark:text-white');
+                item.classList.toggle('bg-gray-300');
+                item.classList.toggle('text-gray-900');
                 
                 // Get the step text
                 const stepText = item.dataset.step;
@@ -141,13 +150,13 @@
                     console.log("Contains Gray");
                     if (existingStepIndex === -1) {
                         savedSteps.push({ patternId, stepText });
-                        console.log("Added Step: ", { patternId, stepText }); 
+                        console.log("Added Step: ", { patternId, stepText });
                     }
                 } else {
                     // Remove from selected steps if deselected
                     if (existingStepIndex > -1) {
                         savedSteps.splice(existingStepIndex, 1);
-                        console.log("Removed Step: ", { patternId, stepText }); 
+                        console.log("Removed Step: ", { patternId, stepText });
                     }
                 }
 
@@ -156,5 +165,6 @@
                 console.log("Updated Saved Steps: ", savedSteps);
             });
         });
+
     </script>
 </x-app-layout>
