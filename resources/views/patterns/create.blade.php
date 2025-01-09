@@ -42,11 +42,8 @@
                     </div>
 
                     <!-- Feature Image URL -->
-                    <div class="mb-6">
-                        <label for="feature_image_url" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Feature Image URL</label>
-                        <input type="text" id="feature_image_url" name="feature_image_url" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800">
-                    </div>
-
+                    <input type="hidden" id="feature_image_url" name="feature_image_url">
+                
                     <!-- Materials -->
                     <div class="mb-6">
                         <label for="materials" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Materials (separated by commas)</label>
@@ -57,13 +54,8 @@
                     </div>
 
                     <!-- PDF Link -->
-                    <div class="mb-6">
-                        <label for="pdk_link" class="block text-sm font-medium text-gray-700 dark:text-gray-200">PDF Link</label>
-                        <input type="url" id="pdk_link" name="pdk_link" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800" value="{{ old('pdk_link') }}" accept="application/pdf">
-                        @error('pdk_link')
-                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
+                    <input type="hidden" id="pdk_link" name="pdk_link" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800" value="{{ old('pdk_link') }}" accept="application/pdf">
+
 
                     <!-- PDF Upload (Optional) -->
                     <div class="mb-6">

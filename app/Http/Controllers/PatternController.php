@@ -136,8 +136,12 @@ class PatternController extends Controller
         $pattern->title = $validated['title'];
         $pattern->category_id = $validated['category_id'];
         $pattern->materials =  $validated['materials'];
-        $pattern->pdk_link = $validated['pdk_link'];
-        $pattern->youtube_link = $validated['youtube_link'];
+        if( isset($validated['pdk_link'])){
+            $pattern->pdk_link = $validated['pdk_link'];
+        }
+        if( isset($validated['youtube_link'])){
+            $pattern->youtube_link = $validated['youtube_link'];
+        }
 
         // Handle feature image upload if present
         if ($request->hasFile('feature_image')) {
