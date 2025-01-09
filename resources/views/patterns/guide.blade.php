@@ -56,12 +56,10 @@
                     <!-- Tab Content -->
                     <div id="knitting" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Knitting</h4>
-                        <p class="mb-4">Knitting involves creating fabric by interlocking loops of yarn with needles. Key techniques include stockinette, garter stitch, ribbing, and cable patterns.</p>
                     </div>
 
                     <div id="crochet" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Crochet</h4>
-                        <p class="mb-4">Crochet involves using a hook to pull yarn through loops, creating a variety of textured fabrics. Popular stitches include single crochet, double crochet, and treble crochet.</p>
                         <table class="min-w-full table-auto border-collapse border border-gray-300 dark:border-gray-700">
                             <thead class="bg-gray-100 dark:bg-gray-700">
                                 <tr>
@@ -156,29 +154,24 @@
 
                     <div id="weaving" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Weaving</h4>
-                        <p class="mb-4">Weaving is the technique of interlacing yarns or threads in a fabric structure. It's commonly used for creating textiles like carpets, tapestries, and fabric for garments.</p>
                         <!-- Weaving content here -->
                     </div>
 
                     <div id="sewing" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Sewing</h4>
-                        <p class="mb-4">Sewing involves stitching fabric pieces together using a needle and thread. It can include techniques like hand sewing, machine sewing, and different stitch types such as backstitch, running stitch, and whipstitch.</p>
                     </div>
 
                     <div id="embroidery" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Embroidery</h4>
-                        <p class="mb-4">Embroidery is the art of decorating fabric with thread. Techniques include cross-stitch, satin stitch, and French knots. It's used for decorative purposes on various fabric items.</p>
-                        <!-- Embroidery content here -->
                     </div>
 
                     <div id="crossstitch" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Cross Stitch</h4>
-                        <p class="mb-4">Embroidery is the art of decorating fabric with thread. Techniques include cross-stitch, satin stitch, and French knots. It's used for decorative purposes on various fabric items.</p>
+                        <a href="https://flosscross.com/designer" target="_Blank">Create your own patterns using flosscross</a>
                         <!-- Cross Stitch content here -->
                     </div>
                     <div id="felting" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Felting</h4>
-                        <p class="mb-4">Felting is the process of matting and compressing fibers (such as wool) to create a solid fabric. It can be done either wet or dry, and is used for making items like hats, slippers, and bags.</p>
                         <!-- Felting content here -->
                     </div>
 
