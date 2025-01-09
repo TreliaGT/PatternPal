@@ -59,8 +59,17 @@
                     <!-- PDF Link -->
                     <div class="mb-6">
                         <label for="pdk_link" class="block text-sm font-medium text-gray-700 dark:text-gray-200">PDF Link</label>
-                        <input type="url" id="pdk_link" name="pdk_link" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 @error('pdk_link') border-red-500 @enderror" value="{{ old('pdk_link') }}">
+                        <input type="url" id="pdk_link" name="pdk_link" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800" value="{{ old('pdk_link') }}" accept="application/pdf">
                         @error('pdk_link')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- PDF Upload (Optional) -->
+                    <div class="mb-6">
+                        <label for="pdf_file" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Upload PDF File</label>
+                        <input type="file" id="pdf_file" name="pdf_file" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100" accept="application/pdf">
+                        @error('pdf_file')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>

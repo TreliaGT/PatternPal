@@ -42,6 +42,7 @@ class PatternController extends Controller
             'feature_image_url' => 'nullable|url',
             'materials' => 'required|string',
             'pdk_link' => 'nullable|url',
+            'pdf_file' => 'nullable|file|mimes:pdf|max:10240',
             'youtube_link' => 'nullable|url',
             'tags' => 'array', // Ensure tags are an array
             'tags.*' => 'exists:tags,id', // Ensure each tag ID exists in the tags table
@@ -59,6 +60,12 @@ class PatternController extends Controller
             $image_url =  $featureImagePath;
         }
 
+        $pdfimagepath = $request->pdk_link;
+        if ($request->hasFile('pdf_file')) {
+            $pdfFile = $request->file('pdf_file');
+            $pdf_path = $pdfFile->store('pdfs', 'public'); // Store PDF in 'public/pdfs' directory
+            $pdfimagepath =  $pdf_path;
+        }
 
         // Create and save the new pattern
         $pattern = Pattern::create([
@@ -66,7 +73,7 @@ class PatternController extends Controller
             'feature_image_url' =>  $image_url,
             'category_id' => $request->category_id,
             'materials' => $request->materials,
-            'pdk_link' => $request->pdk_link,
+            'pdk_link' => $pdfimagepath,
             'youtube_link' => $request->youtube_link,
             'user_id' => Auth::user()->id,
         ]);
@@ -114,7 +121,8 @@ class PatternController extends Controller
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
             'materials' => 'required|string',
-            'pdk_link' => 'nullable|url',
+            'pdf_link' => 'nullable|url', // Optional: URL for PDF link
+            'pdf_file' => 'nullable|file|mimes:pdf|max:10240',
             'youtube_link' => 'nullable|url',
             'feature_image' => 'nullable|image|mimes:jpg,jpeg,png',
             'tags' => 'array|nullable',
@@ -143,6 +151,16 @@ class PatternController extends Controller
             $pattern->feature_image = $imagePath;
         }
 
+        if ($request->hasFile('pdf_file')) {
+            // Delete old PDF file if exists
+            if ($pattern->pdf_file) {
+                Storage::delete('public/' . $pattern->pdf_file);
+            }
+        
+            // Store the new PDF file
+            $pdfPath = $request->file('pdf_file')->store('patterns', 'public');
+            $pattern->pdk_link = $pdfPath;
+        }
         // Save the pattern
         $pattern->save();
 
@@ -181,6 +199,13 @@ class PatternController extends Controller
             $imagePath = storage_path('app/public/' . $pattern->feature_image_url);
             if (file_exists($imagePath)) {
                 unlink($imagePath); // Deletes the image from storage
+            }
+        }
+
+        if ($pattern->pdk_link) {
+            $pdkPath = storage_path('app/public/' . $pattern->pdk_link);
+            if (file_exists($pdkPath)) {
+                unlink($pdkPath); // Deletes the image from storage
             }
         }
 

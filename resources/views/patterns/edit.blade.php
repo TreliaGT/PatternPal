@@ -67,6 +67,14 @@
                             @enderror
                         </div>
 
+                        <div class="mb-6">
+                            <label for="pdf_file" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Upload PDF File</label>
+                            <input type="file" id="pdf_file" name="pdf_file" class="mt-1 block w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-100" accept="application/pdf">
+                            @error('pdf_file')
+                                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
                         <!-- YouTube Link -->
                         <div class="mb-6">
                             <label for="youtube_link" class="block text-sm font-medium text-gray-700 dark:text-gray-200">YouTube Link</label>

@@ -60,22 +60,23 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         @foreach($patterns as $pattern)
-                            <a href="{{ route('patterns.show', ['pattern' => $pattern->id]) }}">
+                            <a href="{{ route('patterns.show', ['pattern' => $pattern->id]) }}" class="flex flex-col space-y-2">
                                 @if ($pattern->feature_image_url)
-                                    <img src="{{ asset('storage/' . $pattern->feature_image_url) }}" alt="{{ $pattern->title }}" class="img-fluid rounded-lg shadow-md">
+                                    <img src="{{ asset('storage/' . $pattern->feature_image_url) }}" alt="{{ $pattern->title }}" class="w-full rounded-lg shadow-md object-cover h-64">
                                 @endif
                                 <div class="p-2">
-                                    <h3>{{ $pattern->title }}</h3>
-                                    <p> {{ $pattern->category->name}}</p>
-                                    <p> Created by {{ $pattern->user->name }}</p>
+                                    <h3 class="text-lg font-semibold">{{ $pattern->title }}</h3>
+                                    <p class="text-sm text-gray-500">{{ $pattern->category->name }}</p>
+                                    <p class="text-sm text-gray-700">Created by {{ $pattern->user->name }}</p>
                                 </div>
                             </a>
                         @endforeach
                     </div>
+
                     <div class="mt-6">
-                        {{ $patterns->links() }} 
+                        {{ $patterns->links() }}
                     </div>
                 </div>
             </div>
