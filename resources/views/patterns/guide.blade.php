@@ -168,6 +168,7 @@
                     <div id="crossstitch" class="tab-content hidden">
                         <h4 class="text-xl font-semibold mt-4 mb-2">Cross Stitch</h4>
                         <a href="https://flosscross.com/designer" target="_Blank">Create your own patterns using flosscross</a>
+                        <a href="https://stitchpoint.com/eng/tool/alph/cross-stitch-writer.php" target="_blank">Create words patterns</a>
                         <!-- Cross Stitch content here -->
                     </div>
                     <div id="felting" class="tab-content hidden">
