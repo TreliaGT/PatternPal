@@ -30,6 +30,9 @@
                     <x-nav-link :href="route('guide')" :active="request()->routeIs('guide')">
                         {{ __('Guide') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('userlist')" :active="request()->routeIs('userlist')">
+                        {{ __('Users') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -96,6 +99,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('patterns.likedPatterns')" :active="request()->routeIs('patterns.likedPatterns')">
             {{ __('Liked Patterns') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('userlist')" :active="request()->routeIs('userlist')">
+            {{ __('Users') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('guide')" :active="request()->routeIs('guide')">
             {{ __('Guide') }}

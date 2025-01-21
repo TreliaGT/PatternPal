@@ -22,8 +22,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/pattern/{pattern}', [PatternController::class, 'update'])->name('patterns.update');
     Route::get('patterns/{pattern}', [PatternController::class, 'show'])->name('patterns.show');
     Route::post('patterns/{pattern}/delete', [PatternController::class, 'destroy'])->name('patterns.destroy');
-
     Route::get('profile_patterns/{user_name}', [PatternController::class, 'profile_pattern'])->name('patterns.profile_pattern');
+    Route::get('userlist', [ProfileController::class, 'userlist'])->name('userlist');
 
     Route::get('category/{category}', [PatternController::class, 'showCategory'])->name('category.show');
     Route::get('tag/{tag}', [PatternController::class, 'showTag'])->name('tag.show');
